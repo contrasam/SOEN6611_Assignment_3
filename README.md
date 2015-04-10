@@ -17,7 +17,7 @@ Note:
   - it takes in two command line arguments
     1. The path of the udb file
     2. the version number
-    - For Example: **python Metrics_Calculator.py ~/chrome.udb 26.0.1410.0**
+  - For Example: **python Metrics_Calculator.py ~/chrome.udb 26.0.1410.0**
   
 * The database configuration can be changed through the file: **conn-info.txt**
 * The document describing the assignment is : **Assignment 3 - CBO and LCOM.docx** (Deliverable 1 and 2)
