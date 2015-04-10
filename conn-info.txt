@@ -1,4 +1,4 @@
 dbname = LCOM_CBO_METRICS
 user = postgres
-password = 123456
+password =
 host = localhost

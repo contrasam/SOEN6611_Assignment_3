@@ -3,7 +3,6 @@ import sys
 
 
 class LCOM:
-
     def calculate_lcom(self, ent_class):
 
         subcomponents = self.get_connected_components(ent_class)
@@ -13,16 +12,16 @@ class LCOM:
 
         return lcom
 
-    def get_connected_components(self,ent_class):
+    def get_connected_components(self, ent_class):
 
         connected_by_attribute = self.get_connected_by_attribute(ent_class)
         connected_by_method_call = self.get_connected_by_method_call(ent_class)
 
         subcomponents = connected_by_attribute + connected_by_method_call
 
-        return subcomponents 
+        return subcomponents
 
-    def get_connected_by_attribute(self,ent_class):
+    def get_connected_by_attribute(self, ent_class):
         connected_subcomponents = []
         ref_instances = []
 
@@ -38,7 +37,7 @@ class LCOM:
 
         return connected_subcomponents
 
-    def get_connected_by_method_call(self,ent_class):
+    def get_connected_by_method_call(self, ent_class):
         connected_subcomponents = []
         ref_methods = []
 
@@ -81,7 +80,7 @@ class LCOM:
             k = []
             for x in subcomponents:
                 z = x
-               
+
                 for i in k:
                     if (z.issubset(i)):
                         break
@@ -90,5 +89,5 @@ class LCOM:
                         z = self.union_subcomponents(z, y)
 
                     k.append(z)
-                
+
             return self.calculate(k)
